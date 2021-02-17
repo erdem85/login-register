@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- THIS PAGE FORM https://tailwindcomponents.com/ -->
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>ApiKit.Net | Login</title>
+      <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.0.2/dist/tailwind.min.css">
+   </head>
+   <body class="bg-gray-200">
+      <nav class="bg-blue-800 p-2 mt-0 fixed w-full z-10 top-0">
+         <div class="container mx-auto flex flex-wrap items-center">
+           <div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
+             <a class="text-white no-underline hover:text-white hover:no-underline" href="/">
+                <span class="text-2xl pl-2"><i class="em em-grinning"></i>ApiKit.Net | Login</span>
+             </a>
+             </div>
+          <div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
+             <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+               <li class="mr-3">
+                <a class="inline-block py-2 px-4 text-white no-underline" href="/">Home Page</a>
+               </li>
+               <li class="mr-3">
+                <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="/dashboard">Dashboard</a>
+               </li>
+             </ul>
+          </div>
+         </div>
+     </nav>
+     <br><br><br>
+      <div class="bg-white lg:w-4/12 md:6/12 w-10/12 m-auto my-10 shadow-md">
+         <div class="py-8 px-8 rounded-xl">
+            <h1 class="font-medium text-2xl mt-3 text-center">Login</h1>
+            <form class="mt-6" id="login" onsubmit="formfunc()">
+               <div class="my-5 text-sm">
+                  <label for="email" class="block text-black">E-Mail</label>
+                  <input type="text" autofocus="" id="email" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full" placeholder="E-Mail">
+               </div>
+               <div class="my-5 text-sm">
+                  <label for="password" class="block text-black">Password</label>
+                  <input type="password" id="password" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full" placeholder="Password">
+                  <p><br></p>
+                  <div class="flex justify-end mt-2 text-xs text-gray-600">
+                  </div>
+               </div>
+               <button class="block text-center text-white bg-gray-800 p-3 duration-300 rounded-sm hover:bg-black w-full">Login</button>
+               <div class="text-center"><a class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800" href="/signin">Create an account!</a></div>
+               <div class="text-center"><a class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800" href="/password_reset">Forgot password?</a></div>
+            </form>
+         </div>
+      </div>
+      <script src = "/public/login.js"></script>
+   </body>
+</html>

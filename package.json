@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@discordjs/collection": "^0.1.6",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "md5": "^2.3.0",
+    "mongoose": "^5.11.15",
+    "nodemailer": "^6.4.18",
+    "quickmongo": "^3.0.0",
+    "random-token-generator": "^1.0.2",
+    "sha256": "^0.2.0"
+  },
+  "name": "login-and-sign-system",
+  "version": "1.0.0",
+  "description": "ApiKit.Net's Login & Signin & Password Reset Pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js 3000"
+  },
+  "keywords": [
+    "sign",
+    "login",
+    "resetpage",
+    "ejs",
+    "mongodb",
+    "express"
+  ],
+  "author": "ApiKit.Net",
+  "license": "SEE LICENSE IN LICENSE.md"
+}
