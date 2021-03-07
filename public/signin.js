@@ -7,11 +7,11 @@ form.addEventListener("submit", async (event) => {
     password = document.getElementById("password").value;
     if(!/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g.test(email)) return alert("Entered E-Mail is invaild.");
     if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$/g.test(password)) return alert("Entered password is invaild.\nPassword must contain at least 1 lowercase, 1 uppercase alphabetical character and 1 numeric character.");
-    response = await fetch(`http://localhost:3000/backsignin/?email=${email}&passwd=${md5(password)}`).then(e => e.json());
+    response = await fetch(`https://apikit.net/backsignin/`, {headers: {email : email, passwd: md5(password)}, method: "POST"}).then(e => e.json());
     if(response.error){
         return alert(`Server-Side Error!\n${response.error}`);
     }else{
-        window.location.href = "http://localhost:3000/login"
+        window.location.href = "https://apikit.net/login"
     }
 })
-const formfunc = () => {console.log("form proceed")}
+const formfunc = () => {}

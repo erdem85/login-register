@@ -5,11 +5,11 @@ form.addEventListener("submit", async (event) => {
     event.preventDefault();
     email = document.getElementById("email").value
     if(!/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g.test(email)) return alert("Entered E-Mail is invaild.");
-    response = await fetch(`http://localhost:3000/passresetbackend/?email=${email}`).then(e => e.json());
+    response = await fetch(`https://apikit.net/passresetbackend/`, {headers: {email: email}, method: "POST"}).then(e => e.json());
     if(response.error){
         return alert(`Server-Side Error!\n${response.error}`);
     }else{
         alert("Check your junk mailbox.")
     }
 })
-const formfunc = () => {console.log("form proceed")}
+const formfunc = () => {}

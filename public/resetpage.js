@@ -4,11 +4,11 @@
          event.preventDefault();
          password = document.getElementById("newpassword").value
          if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$/g.test(password)) return alert("Entered password is invaild.\nPassword must contain at least 1 lowercase, 1 uppercase alphabetical character and 1 numeric character.");
-         response = await fetch(`http://localhost:3000/newpassword/?passwd=${md5(password)}&token=${resettoken}`).then(e => e.json());
+         response = await fetch(`https://apikit.net/newpassword/`, {headers: {passwd: md5(password), token: resettoken}, method: "POST"}).then(e => e.json());
          if(response.error){
             return alert(`Server-Side Error!\n${response.error}`);
          }else{
-            window.location.href = "http://localhost:3000/login"
+            window.location.href = "https://apikit.net/login"
          }
         })
-        const formfunc = () => {console.log("form proceed")}
+        const formfunc = () => {}
