@@ -133,7 +133,7 @@ app.post("/newpassword", async (req,res) => {
 };
 
 power.load({
-  workers: thor.os.cpus().length,
+  workers: require("os").cpus().length,
   logToFile: true,
   path: __dirname + "/power.log",
   master,
