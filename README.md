@@ -1,5 +1,7 @@
 ## https://apikit.net 's Login/Register/Password_Reset pages and backend.
 
+- We're make a new pages, tl;dr repo dont be updating
+
 # Specifications
 - We used Collections but it dont work with clusters, now we use simple SQL database in password reset backend. ( quick.db )
 - Password Reset requests deleting every 06.00 AM
