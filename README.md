@@ -10,4 +10,4 @@
 - Mongo.DB supported, i think.. better than SQL or Firebase.
 - Default password cryption => MD5-MD5-SHA256-SHA256
 
-for your suggestions, https://erdem.apikit.net
+for your suggestions, https://telegram.erdem.ovh & https://discord.erdem.ovh
